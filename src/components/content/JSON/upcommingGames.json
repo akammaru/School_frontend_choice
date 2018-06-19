@@ -1,0 +1,52 @@
+[
+    {
+        "id": 10,
+        "name": "Anthem",
+        "img": "/static/covers/upcomming/anthem.jpg",
+        "yt_vid": "ZFwylDNpgFc",
+        "source": [
+            {
+                "name": "wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Anthem_(video_game)"
+            }
+        ],
+        "short_text": "Anthem is an upcoming online multiplayer action role-playing video game being developed by BioWare and published by Electronic Arts.",
+        "content": [
+            "Anthem is an upcoming online multiplayer action role-playing video game being developed by BioWare and published by Electronic Arts. The game was initially slated for a 2018 release on Microsoft Windows, PlayStation 4 and Xbox One, but this date has since been moved to early 2019. Players will assume the role of a Freelancer, one of a group of people who leave their civilization to explore the surrounding landscape."
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Fallout 76",
+        "img": "/static/covers/upcomming/fallout76.jpg",
+        "short_text": "Fallout 76 is an upcoming online multiplayer action role-playing video game developed by Bethesda Game Studios. It will be a prequel to the Fallout series and is scheduled for release on November 14, 2018.",
+        "content": [
+            "Fallout 76 is an upcoming online multiplayer action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks for Microsoft Windows, PlayStation 4, and Xbox One. It will be a prequel to the Fallout series and is scheduled for release on November 14, 2018."
+        ],
+        "yt_vid": "ye84Zrqndo",
+        "source": [
+            {
+                "name": "wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Fallout_76"
+            }
+
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Sekiro: Shadow die twice",
+        "img": "/static/covers/upcomming/sekiro.jpg",
+        "short_text": "Sekiro: Shadows Die Twice is an upcoming action-adventure video game developed by FromSoftware and published by Activision. The game follows a shinobi named Sekiro as he attempts to take revenge on a samurai who attacked him and kidnapped his lord.",
+        "content": [
+            "Sekiro: Shadows Die Twice is an upcoming action-adventure video game developed by FromSoftware and published by Activision. The game is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One in early 2019. The game follows a shinobi named Sekiro as he attempts to take revenge on a samurai who attacked him and kidnapped his lord."
+        ],
+        "yt_vid": "4OgoTZXPACo",
+        "source": [
+            {
+                "name": "wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Sekiro:_Shadows_Die_Twice"
+            }
+
+        ]
+    }
+]
