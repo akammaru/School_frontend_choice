@@ -1,21 +1,40 @@
 <template>
-    <span class="preview-container">
-        <span class="preview-thumbnail">
-            <img class="preview-img" :src="game.img"/>
+    <div>
+        <span class="preview-container is-hidden-desktop">
+            <div class="preview-thumbnail">
+                <img class="preview-img" :src="game.img"/>
+            </div>
+            <div class="preview-text">
+                <div class="preview-name">
+                {{ game.name }}
+            </div>
+            <div class="preview-summary">
+                {{ game.short_text}}
+            </div>
+            <tag :game="game"/>
+             <div>
+                <button class="preview-button" type="button" @click="openDetail"> more info</button>
+             </div>
+            </div>
         </span>
-        <span class="preview-text">
-            <div class="preview-name">
-            {{ game.name }}
-        </div>
-        <div class="preview-summary">
-            {{ game.short_text}}
-        </div>
-        <tag :game="game"/>
-         <div>
-            <button type="button" @click="openDetail"> more info</button>
-         </div>
+        <span class="preview-container is-hidden-touch">
+            <span class="preview-thumbnail">
+                <img class="preview-img" :src="game.img"/>
+            </span>
+            <span class="preview-text">
+                <div class="preview-name">
+                {{ game.name }}
+            </div>
+            <div class="preview-summary">
+                {{ game.short_text}}
+            </div>
+            <tag :game="game"/>
+             <div>
+                <button class="preview-button" type="button" @click="openDetail"> more info</button>
+             </div>
+            </span>
         </span>
-    </span>
+    </div>
 </template>
 
 <script>
@@ -31,9 +50,7 @@
         data() {
             return {}
         },
-        computed: {
-
-        },
+        computed: {},
         methods: {
             openDetail() {
                 this.$store.dispatch('setCurrentGame', {'game': this.game})

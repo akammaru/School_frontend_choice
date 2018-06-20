@@ -3,27 +3,52 @@
         <div class="detail-title">
             {{game.name}}
         </div>
-        <div class="detail-container">
+        <div class="is-hidden-touch">
+            <div class="detail-container">
+                <img class="detail-image" :src="game.img" :alt="imageAlt"/>
+                <span class="detail-description-container">
+                    <span class="detail-paragraph" v-for="paragraph in game.content">
+                        {{paragraph}}
+                        <br/>
+                        <br/>
+                    </span>
+                </span>
+            </div>
+            <div class="detail-game">
+                <hr class="detail-line">
+                <div v-if="exists(game.yt_vid)" class="detail-yt-vid" align="center">
+                    <iframe class="detail-vid" :src="ytVid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <hr class="detail-line">
+                <div class="detail-title">
+                    Sources:
+                </div>
+                <div v-for="link in game.source" align="center">
+                    <a :href="link.url" :title="linkTitle(link.name)">{{ link.name }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="is-hidden-desktop">
             <img class="detail-image" :src="game.img" :alt="imageAlt"/>
-            <span class="detail-description-container">
+            <div class="detail-description-container detail-mobile">
                 <span class="detail-paragraph" v-for="paragraph in game.content">
                     {{paragraph}}
                     <br/>
                     <br/>
                 </span>
-            </span>
-        </div>
-        <div class="detail-game">
-            <hr class="detail-line">
-            <div v-if="exists(game.yt_vid)" class="detail-yt-vid" align="center">
-                <iframe class="detail-vid" :src="ytVid" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <hr class="detail-line">
-            <div class="detail-title">
-                Sources:
-            </div>
-            <div v-for="link in game.source" align="center">
-                <a :href="link.url" :title="linkTitle(link.name)">{{ link.name }}</a>
+            <div class="detail-game">
+                <hr class="detail-line">
+                <div v-if="exists(game.yt_vid)" class="detail-yt-vid" align="center">
+                    <a :href="ytVidMobile">{{ linkTitle(" trailer") }}</a>
+                </div>
+                <hr class="detail-line">
+                <div class="detail-title">
+                    Sources:
+                </div>
+                <div v-for="link in game.source" align="center">
+                    <a :href="link.url" :title="linkTitle(link.name)">{{ link.name }}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -43,6 +68,9 @@
             },
             ytVid() {
                 return 'https://www.youtube-nocookie.com/embed/' + this.game.yt_vid
+            },
+            ytVidMobile() {
+                return 'https://www.youtube.com/watch?v=' + this.game.yt_vid
             }
         },
         methods: {

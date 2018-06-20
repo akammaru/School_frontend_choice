@@ -37,16 +37,16 @@
                 ]
             }
         },
-        mounted() {
-            this.$nextTick(() => {
-                window.addEventListener('resize', () => {
-                    let test = document.getElementById('home').style
-                    let correctedHeigth = window.innerHeight - 150
-                    test.height = correctedHeigth +"px"
-                    console.log(test, test.height, correctedHeigth)
-                });
-            })
-        },
+        // mounted() {
+        //     this.$nextTick(() => {
+        //         window.addEventListener('resize', () => {
+        //             let test = document.getElementById('home').style
+        //             let correctedHeigth = window.innerHeight - 150
+        //             test.height = correctedHeigth +"px"
+        //             console.log(test, test.height, correctedHeigth)
+        //         });
+        //     })
+        // },
         components: {
             carocel
         },

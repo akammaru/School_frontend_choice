@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div class="app" id="app">
         <website-header />
         <website-nav />
         <div class="content-container">
@@ -29,5 +29,6 @@
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        height: 100%;
     }
 </style>

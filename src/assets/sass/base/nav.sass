@@ -1,21 +1,23 @@
 @import "../utils/main"
 
 .nav-main
-    height: 50px
+    margin: 0 auto
+    width: 100%
+    height: 55px
     background: linear-gradient(lighten($dark-grey, 10%), $black)
     text-align: center
     color: darken($green, 10%)
     display: block
 
 .navbar-button
-    margin-top: 5px
-    width: 150px
+    margin: 5px 5px 5px 5px
+    width: 200px
     border-radius: 5px
     border-width: 0
     display: inline-block
     color: $green
     text-decoration: none
-    background: linear-gradient(lighten($dark-grey, 11%), lighten($black, 1%))
+    background: linear-gradient(lighten($dark-grey, 11%), lighten($black, 3%))
     &.active
         background: linear-gradient(lighten($dark-grey, 15%), lighten($black, 5%))
     &:hover
@@ -23,3 +25,20 @@
 
 .activeLink
     background: linear-gradient(lighten($dark-grey, 15%), lighten($black, 5%))
+
+.navbar
+    color: $green
+    background: $black
+
+.navbar-item
+    color: $green
+    background: $black
+
+.navbar-menu
+    background: $black
+
+a.navbar-item
+    &.active
+        background: lighten($dark-grey, 15%)
+    &:hover
+        background: lighten($dark-grey, 20%)
